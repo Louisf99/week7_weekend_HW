@@ -6,7 +6,7 @@ import DisneyContainer from './containers/DisneyContainer';
 function App() {
   return (
     <>
-    <h1>CountryWiki</h1>
+    <h1>DisneyWikiepedia</h1>
     <hr/>
     <DisneyContainer />
     </>

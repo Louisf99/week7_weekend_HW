@@ -4,7 +4,7 @@ import React from "react";
 const DisneyDetail = ({country, onFavSelected, favCountriesList}) => {
     
     if (!country) {
-        return <h2>Please select a country too see more details</h2>
+        return <h2>Please select a Disney character too see more details</h2>
     }
 
     if (favCountriesList.find(favCountry => favCountry['name'] === country['name'])) {
@@ -20,7 +20,7 @@ const DisneyDetail = ({country, onFavSelected, favCountriesList}) => {
             <p>tvShows: {country['tvShows']}</p>
             <p>Friends/Allies: {country['allies']}</p>
             <p>Enemies: {country['enemies']}</p>
-            <a href={country['sourceUrl']} target="_blank">To Find out even more info click on this!</a> 
+            <a href={country['sourceUrl']} target="_blank">To Find out even more info about them click here!</a> 
             </div>
         )
     }
