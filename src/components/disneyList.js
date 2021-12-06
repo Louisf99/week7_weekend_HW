@@ -1,11 +1,11 @@
 import React from "react";
-import CountryItem from "./disneyItem";
+import DisneyItem from "./disneyItem";
 
 
-const DisneyList = ({countries, onCountrySelected}) => {
+const DisneyList = ({disneys, onDisneySelected}) => {
 
-    const CountriesItems = countries.map((country, index) => {
-        return <CountryItem country={country} key={index} onCountrySelected={onCountrySelected} />
+    const DisneysItems = disneys.map((disney, index) => {
+        return <DisneyItem disney={disney} key={index} onDisneySelected={onDisneySelected} />
     })
 
 
@@ -14,7 +14,7 @@ const DisneyList = ({countries, onCountrySelected}) => {
             <h2>All Disney characters</h2>
             <hr></hr>
             <ul>
-                {CountriesItems}
+                {DisneysItems}
             </ul>
         </div>
 

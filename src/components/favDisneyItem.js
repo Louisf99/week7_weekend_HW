@@ -1,11 +1,11 @@
 import React from "react";
 
-const FavCountryItem = ({favCountry}) => {
+const FavDisneyItem = ({favDisney}) => {
     return (
         <>
-        <li id="favList"><h2>{favCountry['name']}</h2></li>
+        <li id="favList"><h2>{favDisney['name']}</h2></li>
         </>
     )
 };
 
-export default FavCountryItem;
+export default FavDisneyItem;

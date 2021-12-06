@@ -1,11 +1,11 @@
 import React from "react";
 
 
-const CountryItem = ({country, onCountrySelected}) => {
+const DisneyItem = ({disney, onDisneySelected}) => {
     return(
-        <li onClick={ () => {onCountrySelected(country) } }>{country['name']}</li>
+        <li onClick={ () => {onDisneySelected(disney) } }>{disney['name']}</li>
     )
 };
 
 
-export default CountryItem;
+export default DisneyItem;

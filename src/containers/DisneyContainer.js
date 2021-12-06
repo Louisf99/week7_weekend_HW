@@ -5,33 +5,33 @@ import FavDisneys from '../components/favDisneys';
 
 const DisneyContainer = () => {
 
-    const [countries, setCountries] = useState([]);
-    const [ selectedCountry, setSelectedCountry] = useState(null);
-    const [ favCountriesList, setSelectedFavCountry] = useState([]);
+    const [ disneys, setDisneys] = useState([]);
+    const [ selectedDisney, setSelectedDisney] = useState(null);
+    const [ favDisneysList, setSelectedFavDisney] = useState([]);
 
     useEffect(() => {
-      getCountries();
+      getDisneys();
     }, []);
 
-    const getCountries = function(){
+    const getDisneys = function(){
         fetch('https://api.disneyapi.dev/characters')
         .then(res => res.json())
-        .then(countries => setCountries(countries.data))
+        .then(disneys => setDisneys(disneys.data))
     };
     
-    const onCountrySelected = (country) => {
-        setSelectedCountry(country);
+    const onDisneySelected = (disney) => {
+        setSelectedDisney(disney);
     }
 
-    const onFavSelected = (favCountry) => {
-        setSelectedFavCountry([...favCountriesList, favCountry])
+    const onFavSelected = (favDisney) => {
+        setSelectedFavDisney([...favDisneysList, favDisney])
     }
 
     return (
         <div class='container'>
-            <DisneyList countries={countries} onCountrySelected={onCountrySelected}/>
-            <DisneyDetail country={selectedCountry} onFavSelected={onFavSelected} favCountriesList={favCountriesList}/>
-            <FavDisneys favCountriesList={favCountriesList} />
+            <DisneyList disneys={disneys} onDisneySelected={onDisneySelected}/>
+            <DisneyDetail disney={selectedDisney} onFavSelected={onFavSelected} favDisneysList={favDisneysList}/>
+            <FavDisneys favDisneysList={favDisneysList} />
         </div>
 
         

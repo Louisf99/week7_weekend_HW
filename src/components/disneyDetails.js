@@ -1,26 +1,26 @@
 import React from "react";
 
 
-const DisneyDetail = ({country, onFavSelected, favCountriesList}) => {
+const DisneyDetail = ({disney, onFavSelected, favDisneysList}) => {
     
-    if (!country) {
+    if (!disney) {
         return <h2>Please select a Disney character too see more details</h2>
     }
 
-    if (favCountriesList.find(favCountry => favCountry['name'] === country['name'])) {
+    if (favDisneysList.find(favDisney => favDisney['name'] === disney['name'])) {
         return (
             <div class='component'>
             <h2>Chosen character</h2>
             <hr></hr>
-            <h3>{country['name']}</h3>
-            <img src={country['imageUrl']} alt={country['imageUrl']} />
+            <h3>{disney['name']}</h3>
+            <img src={disney['imageUrl']} alt={disney['imageUrl']} />
             <br/>
             <h3>This character features in -</h3>
-            <p>Films: {country['films']}</p>
-            <p>tvShows: {country['tvShows']}</p>
-            <p>Friends/Allies: {country['allies']}</p>
-            <p>Enemies: {country['enemies']}</p>
-            <a href={country['sourceUrl']} target="_blank">To Find out even more info about them click here!</a> 
+            <p>Films: {disney['films']}</p>
+            <p>tvShows: {disney['tvShows']}</p>
+            <p>Friends/Allies: {disney['allies']}</p>
+            <p>Enemies: {disney['enemies']}</p>
+            <a href={disney['sourceUrl']} target="_blank">To Find out even more info about them click here!</a> 
             </div>
         )
     }
@@ -31,17 +31,17 @@ const DisneyDetail = ({country, onFavSelected, favCountriesList}) => {
         <div class='component'>
             <h2>Chosen character</h2>
             <hr></hr>
-           <h3>{country['name']}</h3>
-            <img src={country['imageUrl']} alt={country['imageUrl']} />
+           <h3>{disney['name']}</h3>
+            <img src={disney['imageUrl']} alt={disney['imageUrl']} />
             <br/>
             <h3>This character features in -</h3>
-            <p>Films: {country['films']}</p>
-            <p>tvShows: {country['tvShows']}</p>
-            <p>Friends/Allies: {country['allies']}</p>
-            <p>Enemies: {country['enemies']}</p>
-            <a href={country['sourceUrl']} target="_blank">To Find out even more info click on this!</a>  
+            <p>Films: {disney['films']}</p>
+            <p>tvShows: {disney['tvShows']}</p>
+            <p>Friends/Allies: {disney['allies']}</p>
+            <p>Enemies: {disney['enemies']}</p>
+            <a href={disney['sourceUrl']} target="_blank">To Find out even more info click on this!</a>  
             <br/>
-            <button  class="button" onClick={ () => {onFavSelected(country) } }>&#11088;</button>
+            <button  class="button" onClick={ () => {onFavSelected(disney) } }>&#11088;</button>
         
         </div>
     )

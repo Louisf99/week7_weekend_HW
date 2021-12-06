@@ -1,17 +1,17 @@
 import React from "react";
-import FavCountryItem from "./favDisneyItem";
+import FavDisneyItem from "./favDisneyItem";
 
-const FavDisneys = ({favCountriesList}) => {
+const FavDisneys = ({favDisneysList}) => {
 
-    const starCountries = favCountriesList.map((favCountry, index) => {
-        return <FavCountryItem favCountry={favCountry} key={index} />
+    const starDisneys = favDisneysList.map((favDisney, index) => {
+        return <FavDisneyItem favDisney={favDisney} key={index} />
     });
 
     return (
         <div class='component'>
             <h2>Favourite Disney characters</h2>
             <ul>
-                {starCountries}
+                {starDisneys}
             </ul>
         </div>
     )
