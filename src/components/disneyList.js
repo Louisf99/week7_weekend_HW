@@ -2,7 +2,7 @@ import React from "react";
 import CountryItem from "./disneyItem";
 
 
-const CountryList = ({countries, onCountrySelected}) => {
+const DisneyList = ({countries, onCountrySelected}) => {
 
     const CountriesItems = countries.map((country, index) => {
         return <CountryItem country={country} key={index} onCountrySelected={onCountrySelected} />
@@ -23,4 +23,4 @@ const CountryList = ({countries, onCountrySelected}) => {
     )
 };
 
-export default CountryList;
+export default DisneyList;

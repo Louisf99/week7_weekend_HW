@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import CountryItem from "./disneyItem";
 
-const CountryDetail = ({country, onFavSelected, favCountriesList}) => {
+const DisneyDetail = ({country, onFavSelected, favCountriesList}) => {
     
     if (!country) {
         return <h2>Please select a country too see more details</h2>
@@ -47,4 +47,4 @@ const CountryDetail = ({country, onFavSelected, favCountriesList}) => {
     )
 }
 
-export default CountryDetail
+export default DisneyDetail

@@ -1,7 +1,7 @@
 import React from "react";
 import FavCountryItem from "./favDisneyItem";
 
-const FavCountries = ({favCountriesList}) => {
+const FavDisneys = ({favCountriesList}) => {
 
     const starCountries = favCountriesList.map((favCountry, index) => {
         return <FavCountryItem favCountry={favCountry} key={index} />
@@ -17,4 +17,4 @@ const FavCountries = ({favCountriesList}) => {
     )
 };
 
-export default FavCountries;
+export default FavDisneys;

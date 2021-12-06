@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import CountryList from '../components/disneyList';
-import CountryDetail from '../components/disneyDetails';
-import FavCountries from '../components/favDisneys';
+import DisneyList from '../components/disneyList';
+import DisneyDetail from '../components/disneyDetails';
+import FavDisneys from '../components/favDisneys';
 
 const DisneyContainer = () => {
 
@@ -29,9 +29,9 @@ const DisneyContainer = () => {
 
     return (
         <div class='container'>
-            <CountryList countries={countries} onCountrySelected={onCountrySelected}/>
-            <CountryDetail country={selectedCountry} onFavSelected={onFavSelected} favCountriesList={favCountriesList}/>
-            <FavCountries favCountriesList={favCountriesList} />
+            <DisneyList countries={countries} onCountrySelected={onCountrySelected}/>
+            <DisneyDetail country={selectedCountry} onFavSelected={onFavSelected} favCountriesList={favCountriesList}/>
+            <FavDisneys favCountriesList={favCountriesList} />
         </div>
 
         
