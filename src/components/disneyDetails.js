@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import CountryItem from "./disneyItem";
+import React from "react";
+
 
 const DisneyDetail = ({country, onFavSelected, favCountriesList}) => {
     
